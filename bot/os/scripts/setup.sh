@@ -16,5 +16,4 @@ systemctl reload caddy
 setquota -u $1 15G 15G 0 0 /
 
 # PostgreSQL user & db
-sudo -u postgres createuser $1
-sudo -u postgres createdb -O $1 $1
+sudo -u postgres createuser --createdb --createrole $1
